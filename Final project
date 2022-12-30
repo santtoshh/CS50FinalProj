@@ -1,0 +1,557 @@
+import os
+import time
+import random
+clear = "\n" * 100
+
+
+def gymplanner():
+    while True:
+        entireday = {}
+        day = input("Is it your push, pull or leg day?: ")
+        if day.upper() == "PUSH":
+            sets = {}
+            muscle = {}
+            while True:
+
+                add = input("Do you want to add a chest exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What chest exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Chest"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+
+
+            sets = {}
+            muscle = {}
+            while True:
+                add = input("Do you want to add a tricep exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What tricep exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Tricep"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+
+
+
+            sets = {}
+            muscle = {}
+            while True:
+                add = input("Do you want to add a shoulder exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What shoulder exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Shoulder"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+                    break
+
+
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+            for muscle in entireday:
+                print(muscle + ':')
+                for exercise in entireday[muscle]:
+                    print(exercise)
+                    for set in entireday[muscle][exercise]:
+
+                        for rep in entireday[muscle][exercise]:
+                            print(entireday[muscle][exercise][rep] + ' x ' + set + "\n")
+            break
+
+
+
+
+
+
+
+
+        elif day.upper() == "PULL":
+            sets = {}
+            muscle = {}
+            while True:
+
+                add = input("Do you want to add a back exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What back exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Back"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+
+
+            sets = {}
+            muscle = {}
+            while True:
+                add = input("Do you want to add a bicep exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What bicep exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Bicep"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+
+
+
+            sets = {}
+            muscle = {}
+            while True:
+                add = input("Do you want to add a delt exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What delt exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Delt"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+
+
+            sets = {}
+            muscle = {}
+            while True:
+                add = input("Do you want to add a traps exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What traps exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Traps"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+            for muscle in entireday:
+                print(muscle + ':')
+                for exercise in entireday[muscle]:
+                    print(exercise)
+                    for set in entireday[muscle][exercise]:
+
+                        for rep in entireday[muscle][exercise]:
+                            print(entireday[muscle][exercise][rep] + ' x ' + set + "\n")
+            break
+
+
+
+        elif day.upper() == "LEG":
+            sets = {}
+            muscle = {}
+            while True:
+
+                add = input("Do you want to add a hemstring exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What hemstring exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Hemstring"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+
+
+            sets = {}
+            muscle = {}
+            while True:
+                add = input("Do you want to add a quads exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What quads exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Quads"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+                    print(entireday)
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+
+
+
+            sets = {}
+            muscle = {}
+            while True:
+                add = input("Do you want to add a glutes exercise?: ")
+                if add.upper() == "YES":
+
+                    exercise = input("What glutes exercise do you want to do?: " )
+                    set = input("How many sets do you want to do for this exercise?: ") + " sets"
+                    reps = input("How many reps do you want to do for each set?: ") + " reps"
+                    sets[set] = reps
+                    muscle[exercise] = sets
+                    entireday["Glutes"] = muscle
+                    print(clear)
+                    print("Added!")
+                    continue
+
+
+                elif add.upper() == "NO":
+                    print(clear)
+
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    continue
+            for muscle in entireday:
+                print(muscle + ':')
+                for exercise in entireday[muscle]:
+                    print(exercise)
+                    for set in entireday[muscle][exercise]:
+
+                        for rep in entireday[muscle][exercise]:
+                            print(entireday[muscle][exercise][rep] + ' x ' + set + "\n")
+
+            break
+
+
+        else:
+            print(clear)
+            print("Please type push, pull or leg")
+            continue
+    return
+
+
+
+def dayplanner():
+    todo = {}
+    action = ''
+    timelst = []
+    while True:
+        add = input("Do you want to add an objective?: ")
+        if add.upper() == "YES":
+             action = input("What do you want to complete today?: ")
+             while True:
+                time = input("At what time do you want to start? Please type in HHMM format: ")
+
+                if len(time) != 4:
+                    print(clear)
+                    print("Pleae type in HHMM format!")
+                    continue
+
+                else:
+                    try:
+                        timetemp = time
+                        timetemp = int(timetemp)
+                        todo[time] = action
+                        break
+                    except:
+                        print(clear)
+                        print("Pleae type in HHMM format!")
+                        continue
+
+
+
+
+        elif add.upper() == "NO":
+            print(clear)
+
+            break
+        else:
+            print("Please type yes or no")
+            print(clear)
+            continue
+
+    print("To Do Today: ")
+    for i in todo:
+        print(str(i) +': ' + todo[i])
+
+def planner():
+    while True:
+        ans4 = input("Which planner do you want to access?\nDay planner\nSleep planner\nGym planner\n Reply: ")
+        print(clear)
+        if ans4.upper() == "DAY":
+            return dayplanner()
+        elif ans4.upper() == "GYM":
+            return gymplanner()
+        else:
+            print(clear)
+            print("Please type Day, Sleep or Gym")
+            continue
+
+
+def mode():
+    while True:
+        mode = input("Choose a mode: Planner or Zen: ")
+        while True:
+            if mode.upper() == "PLANNER":
+                print(clear)
+                planner()
+                break
+            elif mode.upper() == "ZEN":
+                print(clear)
+                zen()
+                break
+            else:
+                print(clear)
+                print("Please type either planner or zen")
+                break
+
+def motivational():
+    lstofquotes = ["Success is not final; failure is not fatal: It is the courage to continue that counts.",
+"It is better to fail in originality than to succeed in imitation.",
+"The road to success and the road to failure are almost exactly the same.",
+ "Success usually comes to those who are too busy looking for it.",
+"Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.",
+"Nothing in the world can take the place of Persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. The slogan 'Press On' has solved and always will solve the problems of the human race.",
+"There are three ways to ultimate success: The first way is to be kind. The second way is to be kind. The third way is to be kind.",
+"Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.",
+"I never dreamed about success. I worked for it.",
+"Success is getting what you want, happiness is wanting what you get."]
+    while True:
+        ans = input("Do you want to generate a motivational quote?: ")
+        print(clear)
+        if ans.upper() == "YES":
+            randomnumber = random.randrange(len(lstofquotes))
+            print(clear)
+            print(lstofquotes[randomnumber])
+        elif ans.upper() == "NO":
+            print(clear)
+            mode()
+            break
+        else:
+            print(clear)
+            print("Please type yes or no")
+            continue
+    return
+
+
+def suggestions():
+    lst= ["Remember to drink at least 1 litre of water everyday", "Try to keep active!", "If you are bored but want to stay productive, you can try reading a book or watch educational videos!", "If your mind is feeling clogged up, try meditating. 5 minutes of meditating everyday can go a long way!", "Try jotting down your feelings and thoughts for the day. Having daily reflections can help you get a clearer state of mind!", "Try keeping active! Aim to participate in an activity that increases your heart rate for at least 30 minutes a day!"]
+    while True:
+        ans = input("Do you want to generate a suggestion?: ")
+        print(clear)
+        if ans.upper() == "YES":
+            randomnumber = random.randrange(len(lst))
+            print(clear)
+            print(lst[randomnumber])
+        elif ans.upper() == "NO":
+            print(clear)
+            mode()
+            break
+        else:
+            print(clear)
+            print("Please type yes or no")
+            continue
+    return
+
+
+
+
+
+def zen():
+   while True:
+           ans4 = input("Which zen mode do you want to access?\nMotivational quotes\nSuggestions\n Reply: ")
+           if ans4.upper() == "MOTIVATIONAL":
+            motivational()
+
+
+           elif ans4.upper()== "SUGGESTIONS":
+            print(clear)
+            suggestions()
+            break
+
+           else:
+            print(clear)
+            print("Please type motivational or suggestions")
+            continue
+
+
+
+def start():
+    print(clear)
+    name = input("Hello! what is your name?: ")
+    print(clear)
+    print("Hi " + name + "! ")
+    ans1 = ""
+    while ans1 != "YES":
+        ans1 = input("Do you want to be productive today?: ")
+        if ans1.upper() == "NO":
+            print(clear)
+            print("Okay " + name + " come back to me when you want to")
+            quit()
+        elif ans1.upper() == "YES":
+            print(clear)
+            print("Okay thats good! Lets get started shall we?")
+            break
+        else:
+            print(clear)
+            print("Please type either yes or no")
+    while True:
+        ans2 = input("This app has 2 modes: Planner mode and zen mode. To learn more about each mode, you can type either planner or zen to learn about the respective modes. If you dont want to learn more, type 'no': ")
+        if ans2.upper() == "PLANNER":
+            print(clear)
+            print("Planner mode has 3 functions: \n Day planner \n Gym planner \n Each of these planners will allow you to plan accordingly to its context. Each planner varies in functionality where each of thier goal is to help users maximise time-management" )
+            ans3 = input("Do you want to learn about the other mode? If so, type 'yes'. If not, type 'no': ")
+            while True:
+                if ans3.upper() == "YES":
+                    print(clear)
+                    break
+                elif ans3.upper() == "NO":
+                    print(clear)
+                    mode()
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    break
+        elif ans2.upper() == "ZEN":
+            print(clear)
+            print("Zen mode has 2 functions:\nMotivational quotes\nSuggestions\nMotivational quotes provides users with quotes that can aid users who may need the extra boost in motivation for those days where things may feel sluggish. Suggestions provides users who may not know what to do or begin with with suggestions of where they can start their productivity journey" )
+            ans3 = input("Do you want to learn about the other mode? If so, type 'yes'. If not, type 'no': ")
+            while True:
+                if ans3.upper() == "YES":
+                    print(clear)
+                    break
+                elif ans3.upper() == "NO":
+                    print(clear)
+                    mode()
+                    break
+                else:
+                    print(clear)
+                    print("Please type yes or no")
+                    break
+        elif ans2.upper() == "NO":
+            print(clear)
+            mode()
+        else:
+            print(clear)
+            print("Please type either planner or zen to learn about the respective modes or no if you want to continue: ")
+            continue
+
+def planner():
+    while True:
+
+        ans4 = input("Which planner do you want to access?\nDay planner\nGym planner\n Reply: ")
+        if ans4.upper() == "DAY":
+            print(clear)
+            return dayplanner()
+            break
+        elif ans4.upper() == "GYM":
+            print(clear)
+            return gymplanner()
+            break
+        else:
+            print(clear)
+            print("Please type day or gym to access its respective planner")
+            continue
+
+start()
+
